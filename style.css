@@ -1,0 +1,225 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    color:#333;
+}
+/*=================NAVIGACIJA=================*/
+.navigacija{
+    display:grid;
+    grid-template-columns: 150px 1fr;
+    padding:20px 40px;
+    border-bottom:1px solid #ddd;
+}
+.nav-linkovi{
+    display:flex;
+    justify-content:flex-end;
+    gap:30px;
+    align-items:center;
+    list-style-type:none;
+}
+.nav-linkovi a{
+    text-decoration:none;
+    color:#333;
+    font-size:0.9rem;
+}
+.nav-linkovi a:hover{
+    opacity:0.6;
+}
+.nav-linkovi .button{
+    color:white;
+    background-color:black;
+    padding:5px;
+    border-radius:2px;
+}
+.nav-linkovi .button:hover{
+    color:black;
+    background-color:white;
+    border:1px solid black;
+}
+/*========================HERO===========================*/
+.hero
+{
+    display:flex;
+    min-height:420px;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    background-color:#ccc;
+}
+.hero h1{
+    font-size:3.5rem;
+    letter-spacing: 2px;
+    margin-bottom:35px;
+}
+.hero p{
+    font-size:1rem;
+    color:#666;
+    margin-bottom:15px;
+}
+.hero button{
+    padding:20px;
+    border:2px solid #ddd;
+    border-radius:10px;
+    font-size:0.85rem;
+    letter-spacing: 2px;
+    background:transparent;
+    cursor:pointer;
+}
+.hero button:hover{
+    color:white;
+    background-color:#333;
+    border:none;
+}
+/*=====================USLUGE==========================*/
+.usluge{
+    text-align:center;
+    padding:20px;
+}
+.usluge-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:20px;
+    margin-top:20px;
+}
+.usluge h2{
+    font-size:1.8rem;
+    letter-spacing: 3px;
+    margin-bottom:15px;
+}
+.usluge-grid .kartica{
+    border:1px solid #eee; 
+    text-align:left;
+   
+}
+.kartica img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    display:block;
+    margin-bottom:15px;
+}
+.kartica p{
+    margin:0 10px 20px 10px;
+}
+.kartica h3{
+    margin-left:10px;
+}
+/*====================RECENZIJE================*/
+.recenzije{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    background-color:#f5f5f5;
+}
+.recenzije-lijevo, .recenzije-desno{
+    padding:50px 40px;
+}
+.recenzije-lijevo img{
+    width:100%;
+    margin-bottom:20px;
+}
+.recenzije-desno{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:25px;
+}
+.recenzije-desno p{
+    line-height:1.8;
+    color:#555;
+}
+.recenzije-desno img{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+/*========2. c O nama =========*/
+.o-nama{
+    display: grid;
+    min-height: 420px;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    padding: 60px 70px;
+    align-items: center;
+}
+.o-nama-tekst h2{
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+
+}
+.o-nama p{
+    line-height: 1.8;
+    color: #555;
+}
+/* Placeholder za Google Maps */
+.mapa-placeholder {
+    background: #e8e8e8;
+    height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    border: 1px solid #ccc;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+    background: #f8f8f8;
+    border-top: 1px solid #ddd;
+}
+footer h2 {
+    font-size: 1.4rem;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+}
+
+/*==========RESPONZIVNOST================*/
+@media(max-width:768px){ /*tableti - M*/
+    .navigacija{
+        background-color:red;
+         grid-template-columns:1fr;
+    }
+    .nav-linkovi{
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+    .hero h1{
+        font-size:2.5 rem;
+    }
+    .usluge-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media(max-width:480px) /*mobiteli - S*/
+{
+    .navigacija{
+        background-color: blue;
+         grid-template-columns:1fr;
+    }
+    .nav-linkovi{
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+     .hero h1{
+        font-size:2.5 rem;
+    }
+    .hero{
+        min-height:300px;
+    }
+    .usluge-grid{
+        grid-template-columns: 1fr;
+    }
+    .recenzije,.o-nama{
+        grid-template-columns: 1fr;
+    }
+}
+
+
